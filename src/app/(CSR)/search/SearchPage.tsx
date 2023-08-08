@@ -25,7 +25,7 @@ export default function SearchPage(){
             setSearchResults(null)
             setSearchResultsLoadingIsError(false)
             setSearchResultsLoading(true)
-            const res = await fetch('https://next-js-tutorial-project.vercel.app//api/search?query=' + query)
+            const res = await fetch('https://next-js-tutorial-project.vercel.app/api/search?query=' + query)
             const images: unsplashImage[] = await res.json()
             console.log(images)
             setSearchResults(images)
